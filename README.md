@@ -22,12 +22,9 @@ k8s-token = "USE_TOKEN_FROM_PREVIOUS_STEP"
 private_key_file = "ssh/harshal-ic.ppk"
 public_key_file = "ssh/harshal-ic-pub.txt"
 ~~~
-* Run `terraform apply`
+* Run `terraform apply`. Once the process finishes, 1 master and 2(default) workers will be created and admin.conf to work with kubernetes cluster will get copied to the PWD location.
 
 **Note:** Variables defined in variables.tf can be overwritten by updating them in terraform.tfvars
 
-* Once the process finishes, run following command to get kubernetes configuration locally:
-`scp -i <PRIVATE_KEY> root@<MASTER_PUBLIC_IP>:/etc/kubernetes/admin.conf .`
-
-* Access your k8s cluster via following command:
+* Once the process finishes, run following command to work with your kubernetes cluster:
 `kubectl --kubeconfig ./admin.conf get nodes`

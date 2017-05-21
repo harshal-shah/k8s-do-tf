@@ -33,7 +33,7 @@ variable "k8s-master-size"{
 }
 
 variable "k8s-node-count" {
-  default = 2
+  default = 3
   description = "Number of worker nodes in cluster"
 }
 

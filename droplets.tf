@@ -26,6 +26,10 @@ resource "digitalocean_droplet" "k8s-master-droplet" {
       "cat /etc/kubernetes/admin.conf"
     ]
   }
+
+  provisioner "local-exec" {
+    command = "scp -i ${var.private_key_file} root@${digitalocean_droplet.k8s-master-droplet.ipv4_address}:/etc/kubernetes/admin.conf ."
+  }
 }
 
 resource "digitalocean_droplet" "k8s-node-droplet"{
