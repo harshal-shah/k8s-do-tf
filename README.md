@@ -1,6 +1,6 @@
 # Introduction
 This repository can be used to spin a Kubernetes cluster on DigitalOcean with very little effort.
-The overall flow is taken from (Janakiram MSV's tutorial)[https://thenewstack.io/tutorial-run-multi-node-kubernetes-cluster-digitalocean/]
+The overall flow is taken from [Janakiram MSV's tutorial](https://thenewstack.io/tutorial-run-multi-node-kubernetes-cluster-digitalocean/)
 
 # Steps
 
