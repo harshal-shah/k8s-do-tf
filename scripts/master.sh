@@ -2,7 +2,7 @@
 
 TOKEN=$1
 
-apt-get update && apt-get upgrade -y
+apt-get update -y # && apt-get upgrade -y
 
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 
